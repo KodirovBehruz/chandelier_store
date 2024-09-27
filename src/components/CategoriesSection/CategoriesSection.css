@@ -1,0 +1,57 @@
+.categories-section .container {
+    width: 100%;
+    max-width: 1400px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.button-categories {
+    width: 120px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #1F2535;
+    color: #FFFFFF;
+}
+
+.button-categories img {
+    margin-right: 5px;
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.search-action {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-field {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: #0C0D10;
+    color: #FFFFFF;
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%); /* Центрируем иконку по вертикали */
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}

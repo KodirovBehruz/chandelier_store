@@ -1,0 +1,54 @@
+.about-section {
+    position: relative;
+    margin-top: 100px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-image  {
+    width: 100%;
+    max-width: 1050px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.about-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.about-item {
+    padding: 40px;
+    border-radius: 10px;
+    width: 500px;
+    height: 300px;
+    background-color: #17181D;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.about-icon {
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 15px;
+}
+
+.about-item p {
+    margin-top: 30px;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #F1F1F1;
+    width: 350px;
+}
+
+.about-button {
+    margin-top: 30px;
+}

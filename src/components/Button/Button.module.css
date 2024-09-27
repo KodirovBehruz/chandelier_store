@@ -1,0 +1,29 @@
+.button {
+    margin-top: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 66px;
+    padding: 10px;
+    border: none;
+    border-radius: 13px;
+    font-size: 16px;
+    background-color: #0055FF;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover,
+.button:active {
+    background-color: #066AFF;
+    transform: scale(1.05);
+}
+
+.button img {
+    margin-right: 10px;
+    width: 30px;
+    height: 20px;
+}
+

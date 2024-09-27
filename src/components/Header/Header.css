@@ -1,0 +1,58 @@
+.header .container {
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1400px;
+    height: 40px;
+    padding: 20px 0 20px 20px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo img {
+    height: 50px;
+    user-select: none;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 0 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menu ul li:hover {
+    color: #0055FF;
+}
+
+.login-button {
+    width: 100px;
+    height: 37px;
+    margin-right: 1px;
+    background-color: #0055FF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.login-button img {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
