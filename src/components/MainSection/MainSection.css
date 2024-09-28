@@ -5,6 +5,7 @@
     align-items: center;
     min-height: 600px;
     position: relative;
+    flex-direction: column; /* Добавляем вертикальную компоновку */
 }
 
 .main-info {
@@ -24,37 +25,12 @@
     top: 0;
 }
 
-.main-image {
-    margin-top: 70px;
-    width: 960px;
-    height: 600px;
-    position: relative;
-    overflow: hidden; /* Чтобы изображение не выходило за пределы */
-}
-
-.main-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Изображение сохраняет пропорции и заполняет контейнер */
-    transition: opacity 1s ease-in-out; /* Плавный переход для смены изображения */
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.main-image img.fade-out {
-    opacity: 0; /* Плавное исчезновение старого изображения */
-}
-
-.main-image img.fade-in {
-    opacity: 1; /* Плавное появление нового изображение */
-}
-
-
 .main-image-text {
     color: #A8ACB1;
     font-size: 16px;
     text-align: center;
     max-width: 670px;
-    margin: 30px auto;
+    margin: 30px auto 0 auto; /* Добавляем отступ сверху */
+    z-index: 1;
+    position: relative;
 }

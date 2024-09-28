@@ -117,3 +117,38 @@ export const faqData = [
         answer: 'Мы принимаем оплату банковскими картами, через онлайн-кошельки (DC, Alif) и банковский перевод (перевод с карты на карту). Также возможна оплата при доставке в некоторых регионах.'
     }
 ]
+
+
+import Image1 from "./assets/images/main_img_1.png"
+import Image2 from "./assets/images/main_img_2.png"
+import Image3 from "./assets/images/main_img_3.png"
+import Image4 from "./assets/images/main_img_4.png"
+import Image5 from "./assets/images/main_img_5.png"
+import Image6 from "./assets/images/main_img_6.png"
+
+export const sliderData = [
+    {
+        title: "Image1",
+        image: Image1
+    },
+    {
+        title: "Image2",
+        image: Image2
+    },
+    {
+        title: "Image3",
+        image: Image3
+    },
+    {
+        title: "Image4",
+        image: Image4
+    },
+    {
+        title: "Image5",
+        image: Image5
+    },
+    {
+        title: "Image6",
+        image: Image6
+    },
+]

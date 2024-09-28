@@ -1,0 +1,29 @@
+.swiper-pagination-bullet {
+    background: #fff;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: #fff;
+}
+
+.swiper-slide img {
+    margin-top: 100px;
+    margin-bottom: 10px;
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.8s ease-in-out; /* Плавный переход между изображениями */
+}
+
+.swiper-slide-active img {
+    transform: scale(1); /* Масштаб для активного изображения */
+}
+
+.swiper-slide img {
+    transform: scale(0.95); /* Уменьшаем масштаб для неактивных слайдов */
+    opacity: 0.7; /* Полупрозрачные изображения для неактивных слайдов */
+}
+
+.swiper-slide-active img {
+    opacity: 1; /* Полностью видимое активное изображение */
+}
