@@ -2,8 +2,17 @@ import all_icon from "../../assets/icons/all_icon.png"
 import search_icon from "../../assets/icons/search_icon.png"
 import "../../App.css"
 import "./CategoriesSection.css"
+import {useState} from "react";
 
-export default function CategoriesSection() {
+// eslint-disable-next-line react/prop-types
+export default function CategoriesSection({ onSearch }) {
+    // eslint-disable-next-line no-unused-vars
+    const [searchQuery, setSearchQuery] = useState("")
+    const handleSearch = (e) => {
+        setSearchQuery(e.target.value)
+        onSearch(e.target.value)
+    }
+
     return (
         <section className="categories-section">
             <div className="container">
@@ -16,7 +25,7 @@ export default function CategoriesSection() {
                 <button className="button-categories">Настольные</button>
                 <button className="button-categories">Лампочки</button>
                 <div className="search-action">
-                    <input type="text" placeholder="Название товара..." className="search-field" />
+                    <input type="text" placeholder="Название товара..." className="search-field" onChange={handleSearch} />
                         <img src={search_icon} alt="Search-Icon" className="search-icon" />
                 </div>
             </div>

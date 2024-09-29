@@ -2,7 +2,7 @@ import Button from "../Button/Button.jsx";
 import "./CatalogPage.css"
 
 export default function CatalogItems({ image, text, sizes, discount, price, inStock }) {
-    const discountedPrice = discount ? (price - (discount * 100)) : price;
+    const discountedPrice = discount ? (price - price * (discount / 100)) : price;
 
     return (
         <div className="catalog-item">
