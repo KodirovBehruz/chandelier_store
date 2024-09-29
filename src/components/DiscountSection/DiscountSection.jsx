@@ -1,25 +1,17 @@
-import './DiscountSection.css'
+import "./DiscountSection.css"
 import '../../App.css'
-import { discountData } from "../../data.js"
-import DiscountItems from "./DiscountItems.jsx";
+import { catalogData } from "../../data.js";
+import CatalogItems from "../CatalogPage/CatalogItems.jsx";
 
 export default function DiscountSection() {
+    const discountProducts = catalogData.filter(product => product.discount > 0)
+
     return (
-        <section className="discount-section">
+        <section id='discount-section' className="discount-section">
             <div className="container">
                 <h1 className="common-title">Лучшие предложения</h1>
                 <div className="discount-items">
-                    {discountData.map(product => (
-                        <DiscountItems
-                            key={product.id}
-                            image={product.image}
-                            text={product.text}
-                            sizes={product.sizes}
-                            discount={product.discount}
-                            price={product.price}
-                            inStock={product.inStock}
-                        />
-                    ))}
+                    {discountProducts.map(product => <CatalogItems key={product.id} {...product} product={product} />)}
                 </div>
             </div>
         </section>

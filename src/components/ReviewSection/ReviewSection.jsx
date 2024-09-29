@@ -7,7 +7,7 @@ import ava_female from "../../assets/images/ava_female.svg"
 
 export default function ReviewSection() {
     return (
-        <section className="reviews-section">
+        <section id='reviews-section' className="reviews-section">
             <div className="container">
                 <div className="reviews-top-block">
                     <h1 className="common-title review-title">Хотите вдохновиться идеями для вашего интерьера? </h1>

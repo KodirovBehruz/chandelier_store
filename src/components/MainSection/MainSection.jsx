@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom";
 import './MainSection.css'
 import '../../App.css'
 import Button from "../Button/Button.jsx";
@@ -8,7 +9,6 @@ import Slider from "./Slider.jsx";
 
 
 export default function MainSection() {
-
     return (
         <section className="main-section">
             <div className="container">
@@ -19,10 +19,12 @@ export default function MainSection() {
                         Наши люстры придадут вашему дому неповторимую атмосферу изысканности и стиля.
                         Создайте пространство, которое будет сиять роскошью и теплом.
                     </p>
-                    <Button className="button">
-                        <img src={catalogIcon} alt="Catalog-Icon"/>
-                        Перейти в каталог
-                    </Button>
+                    <Link to='/catalog'>
+                        <Button className="button">
+                            <img src={catalogIcon} alt="Catalog-Icon"/>
+                            Перейти в каталог
+                        </Button>
+                    </Link>
 
                     <div className="main-image">
                         <Slider slides={sliderData} />

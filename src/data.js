@@ -1,36 +1,56 @@
-import discount_image1 from "./assets/product_images/7508(circle).png"
-import discount_image2 from "./assets/product_images/8086(circle).png"
-import discount_image3 from "./assets/product_images/8091.png"
+import product_image1 from "./assets/product_images/1.png"
+import product_image2 from "./assets/product_images/2.png"
+import product_image3 from "./assets/product_images/3.png"
+import product_image4 from "./assets/product_images/4.png"
+import product_image5 from "./assets/product_images/5.png"
 
 
-export const discountData = [
+export const catalogData = [
     {
-        id: 7508,
-        image: discount_image1,
-        text: "Подвесная люстра Citilux Базель 7508",
-        sizes: ['60см', '100см', 'L100см', 'L120см'],
-        discount: 10,
-        price: 100,
-        inStock: true,
-    },
-    {
-        id: 8091,
-        image: discount_image2,
-        text: "Подвесная люстра Citilux Базель 8091",
+        id: 1,
+        image: product_image1,
+        text: "Подвесная люстра Aurora Crystal Luxe",
         sizes: ['60см', '100см', 'L100см', 'L120см'],
         discount: null,
         price: 100,
         inStock: true,
     },
     {
-        id: 8086,
-        image: discount_image3,
-        text: "Подвесная люстра Citilux Базель 8086",
+        id: 2,
+        image: product_image2,
+        text: "Подвесная люстра Grand Opal Crystal",
         sizes: ['60см', '100см', 'L100см', 'L120см'],
         discount: 10,
         price: 100,
         inStock: false,
-    }
+    },
+    {
+        id: 3,
+        image: product_image3,
+        text: "Подвесная люстра Zenith Minimalist",
+        sizes: ['60см', '100см', 'L100см', 'L120см'],
+        discount: 10,
+        price: 100,
+        inStock: true,
+    },
+    {
+        id: 4,
+        image: product_image4,
+        text: "Подвесная люстра Vintage Elegance",
+        sizes: ['60см', '100см', 'L100см', 'L120см'],
+        discount: 10,
+        price: 100,
+        inStock: false,
+    },
+    {
+        id: 5,
+        image: product_image5,
+        text: "Подвесная люстра Vintage Elegance",
+        sizes: ['60см', '100см', 'L100см', 'L120см'],
+        discount: null,
+        price: 100,
+        inStock: false,
+    },
 ]
 
 
