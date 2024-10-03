@@ -13,7 +13,11 @@ export default function CatalogItems({ image, text, sizes, discount, price, inSt
                 <div className="catalog-item-text">{text}</div>
                 <div className="catalog-item-sizes">
                     <ul>
-                        {sizes.map((size, index) => <li key={index}>{size}</li>)}
+                        {Array.isArray(sizes) ?
+                          sizes.map((size, index) => <li key={index}>{size}</li>
+                        ) : (
+                          <li>{typeof sizes === "object" ? JSON.stringify(sizes) : sizes}</li>
+                        )}
                     </ul>
                 </div>
             </div>

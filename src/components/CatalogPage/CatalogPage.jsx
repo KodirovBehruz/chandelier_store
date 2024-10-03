@@ -4,8 +4,13 @@ import { catalogData } from "../../data.js"
 import CatalogItems from "./CatalogItems.jsx";
 import no_product from "../../assets/icons/dont-have-product.png"
 
-export default function CatalogPage({searchQuery}) {
-    const filteredProducts = catalogData.filter(product => product.text.toLowerCase().includes(searchQuery.toLowerCase()));
+export default function CatalogPage({ searchQuery, selectedCategory }) {
+    const filteredProducts = catalogData.filter(product => {
+        const matchesSearch = product.text.toLowerCase().includes(searchQuery.toLowerCase());
+        const matchesCategory = selectedCategory === "all" || product.category === selectedCategory;
+        return matchesSearch && matchesCategory;
+    });
+
     return (
         <section className="catalog-page">
             <div className="container">

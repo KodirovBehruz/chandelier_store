@@ -5,7 +5,7 @@ import "./CategoriesSection.css"
 import {useState} from "react";
 
 // eslint-disable-next-line react/prop-types
-export default function CategoriesSection({ onSearch }) {
+export default function CategoriesSection({ onSearch, onCategoryChange }) {
     // eslint-disable-next-line no-unused-vars
     const [searchQuery, setSearchQuery] = useState("")
     const handleSearch = (e) => {
@@ -16,11 +16,11 @@ export default function CategoriesSection({ onSearch }) {
     return (
         <section className="categories-section">
             <div className="container">
-                <button className="button-categories">
-                    <img src={all_icon} alt="All-Icon" />Все
+                <button className="button-categories" onClick={() => onCategoryChange("all")}>
+                    <img src={all_icon} alt="All-Icon"/>Все
                 </button>
-                <button className="button-categories">Люстры</button>
-                <button className="button-categories">Светильники</button>
+                <button className="button-categories" onClick={() => onCategoryChange("chandelier")}>Люстры</button>
+                <button className="button-categories" onClick={() => onCategoryChange("ceiling_chandelier")}>Светильники</button>
                 <button className="button-categories">Настенные</button>
                 <button className="button-categories">Настольные</button>
                 <button className="button-categories">Лампочки</button>

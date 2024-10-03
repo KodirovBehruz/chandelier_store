@@ -13,18 +13,13 @@ import {useState} from "react";
 
 export default function App() {
     const [searchQuery, setSearchQuery] = useState("");
-
-    // Функция обновления поискового запроса
-    const handleSearch = (query) => {
-        setSearchQuery(query);
-    };
+    const [selectedCategory, setSelectedCategory] = useState("all");
 
     return (
         <Routes>
             <Route path='/' element={
                 <>
                     <Header />
-                    <CategoriesSection onSearch={handleSearch} />
                     <MainSection />
                     <DiscountSection />
                     <AboutSection />
@@ -36,8 +31,8 @@ export default function App() {
             <Route path='/catalog' element={
                 <>
                     <Header />
-                    <CategoriesSection onSearch={handleSearch} />
-                    <CatalogPage searchQuery={searchQuery} />
+                    <CategoriesSection onSearch={(query) => setSearchQuery(query)} onCategoryChange={(category) => setSelectedCategory(category)} />
+                    <CatalogPage searchQuery={searchQuery} selectedCategory={selectedCategory} />
                     <Footer />
                 </>
             } />

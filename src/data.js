@@ -1,15 +1,19 @@
-import product_image1 from "./assets/product_images/1.png"
-import product_image2 from "./assets/product_images/2.png"
-import product_image3 from "./assets/product_images/3.png"
-import product_image4 from "./assets/product_images/4.png"
-import product_image5 from "./assets/product_images/5.png"
+import chand1 from "./assets/product_images/chand1.png"
+import chand2 from "./assets/product_images/chand2.png"
+import chand3 from "./assets/product_images/chand.png"
+import chand4 from "./assets/product_images/chand4.png"
+import chand5 from "./assets/product_images/chand5.png"
+import ceiling_chand1 from "./assets/product_images/ceiling_chand1.png"
+import ceiling_chand2 from "./assets/product_images/ceiling_chand2.png"
+import ceiling_chand3 from "./assets/product_images/ceiling_chand3.png"
 
 
 export const catalogData = [
     {
         id: 1,
-        image: product_image1,
-        text: "Подвесная люстра Aurora Crystal Luxe",
+        category: "chandelier",
+        image: chand1,
+        text: "Подвесная люстра Aurora Crystal Luxe.",
         sizes: ['60см', '100см', 'L100см', 'L120см'],
         discount: null,
         price: 100,
@@ -17,35 +21,79 @@ export const catalogData = [
     },
     {
         id: 2,
-        image: product_image2,
-        text: "Подвесная люстра Grand Opal Crystal",
+        category: "ceiling_chandelier",
+        image: ceiling_chand1,
+        text: "Потолочный светильник Eurosvet.",
+        sizes: "58см x 58см x 54см",
+        discount: null,
+        price: 100,
+        inStock: true,
+    },
+    {
+        id: 3,
+        category: "chandelier",
+        image: chand2,
+        text: "Подвесная люстра Grand Opal Crystal.",
         sizes: ['60см', '100см', 'L100см', 'L120см'],
         discount: 10,
         price: 100,
         inStock: false,
     },
     {
-        id: 3,
-        image: product_image3,
-        text: "Подвесная люстра Zenith Minimalist",
+        id: 4,
+        category: "chandelier",
+        image: chand3,
+        text: "Подвесная люстра Zenith Minimalist.",
         sizes: ['60см', '100см', 'L100см', 'L120см'],
         discount: 10,
         price: 100,
         inStock: true,
     },
     {
-        id: 4,
-        image: product_image4,
-        text: "Подвесная люстра Vintage Elegance",
+        id: 5,
+        category: "ceiling_chandelier",
+        image: ceiling_chand2,
+        text: "Потолочный светильник Eurosvet.",
+        sizes: "116см x 116см",
+        discount: null,
+        price: 100,
+        inStock: true,
+    },
+    {
+        id: 6,
+        category: "ceiling_chandelier",
+        image: ceiling_chand3,
+        text: "Потолочный светильник Eurosvet.",
+        sizes: "116см x 116см",
+        discount: null,
+        price: 100,
+        inStock: true,
+    },
+    {
+        id: 7,
+        category: "chandelier",
+        image: chand4,
+        text: "Подвесная люстра Vintage Elegance.",
         sizes: ['60см', '100см', 'L100см', 'L120см'],
         discount: 10,
         price: 100,
         inStock: false,
     },
     {
-        id: 5,
-        image: product_image5,
-        text: "Подвесная люстра Vintage Elegance",
+        id: 8,
+        category: "chandelier",
+        image: chand5,
+        text: "Подвесная люстра Vintage Elegance.",
+        sizes: ['60см', '100см', 'L100см', 'L120см'],
+        discount: null,
+        price: 100,
+        inStock: false,
+    },
+    {
+        id: 9,
+        category: "ceiling_chandelier",
+        image: chand5,
+        text: "Подвесная люстра Vintage Elegance.",
         sizes: ['60см', '100см', 'L100см', 'L120см'],
         discount: null,
         price: 100,
