@@ -1,7 +1,10 @@
 import Button from "../Button/Button.jsx";
 import "./CatalogPage.css"
+import {useActions} from "../../hooks/useActions.js";
 
-export default function CatalogItems({ image, text, sizes, discount, price, inStock }) {
+export default function CatalogItems({ image, text, sizes, discount, price, inStock, product }) {
+    const { addToBasket } = useActions();
+
     const discountedPrice = discount ? (price - price * (discount / 100)) : price;
 
     return (
@@ -38,7 +41,7 @@ export default function CatalogItems({ image, text, sizes, discount, price, inSt
             </div>
             }
             <div className="catalog-item-button">
-                <Button className="button catalog-btn">В корзину</Button>
+                <Button className="button catalog-btn" onClick={() => addToBasket(product)}>В корзину</Button>
             </div>
         </div>
     )

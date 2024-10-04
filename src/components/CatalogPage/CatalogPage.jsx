@@ -4,8 +4,10 @@ import { catalogData } from "../../data.js"
 import CatalogItems from "./CatalogItems.jsx";
 import no_product from "../../assets/icons/dont-have-product.png"
 
+// eslint-disable-next-line react/prop-types
 export default function CatalogPage({ searchQuery, selectedCategory }) {
     const filteredProducts = catalogData.filter(product => {
+        // eslint-disable-next-line react/prop-types
         const matchesSearch = product.text.toLowerCase().includes(searchQuery.toLowerCase());
         const matchesCategory = selectedCategory === "all" || product.category === selectedCategory;
         return matchesSearch && matchesCategory;
@@ -18,14 +20,7 @@ export default function CatalogPage({ searchQuery, selectedCategory }) {
                 {filteredProducts.length > 0 ? (
                   <div className="catalog-items">
                       {filteredProducts.map(product => (
-                        <CatalogItems
-                          key={product.id}
-                          image={product.image}
-                          text={product.text}
-                          sizes={product.sizes}
-                          discount={product.discount}
-                          price={product.price}
-                          inStock={product.inStock}
+                        <CatalogItems key={product.id} {...product} product={product}
                         />
                       ))}
                   </div>

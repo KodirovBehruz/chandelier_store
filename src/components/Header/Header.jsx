@@ -4,9 +4,12 @@ import logo_icon from "../../assets/icons/logo_icon.png"
 import login_icon from "../../assets/icons/login_icon.png"
 import "../../App.css"
 import "./Header.css"
+import {useState} from "react";
+import Basket from "./Basket.jsx";
 
 
 export default function Header() {
+    let [isBasketOpen, setIsBasketOpen] = useState(false);
     const navigate = useNavigate();
 
     const scrollToSection = (sectionId) => {
@@ -33,7 +36,9 @@ export default function Header() {
                         <li>Производители</li>
                         <li onClick={() => scrollToSection('discount-section')}>Акции</li>
                         <li onClick={() => scrollToSection('reviews-section')}>Отзывы</li>
-                        <li>Корзина</li>
+                        <li onClick={() => setIsBasketOpen(prevState => !prevState)}>Корзина</li>
+                        {isBasketOpen && <Basket />}
+
                         <li>Контакты</li>
                         <li>О платформе</li>
                     </ul>
