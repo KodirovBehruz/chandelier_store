@@ -58,72 +58,132 @@
 }
 
 .basket-section {
-    position: absolute;
-    top: 30px;
-    left: -20px;
-    width: 450px;
-    padding: 20px;
-    background-color: #fff;
-    -webkit-box-shadow: 4px 5px 15px -7px;
-    box-shadow: 4px 5px 15px -7px #606060;
-    z-index: 1000;
-    padding-bottom: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.basket-section > h1 {
-    font-size: 20px;
-    margin-top: 20px;
-    text-align: center;
+.basket-section > div {
+    width: 800px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
-.basket-section > img {
-    margin-top: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 150px;
+.basket-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
 }
 
 .basket-item {
-    width: 100%;
-    float: left;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .basket-item img {
-    width: 70px;
-    float: left;
-    margin-right: 20px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .basket-item-text {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-left: 20px;
+    flex-grow: 1;
 }
 
 .basket-item-price {
-    color: green;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 10px;
 }
 
-.basket-delete-icon {
-    color: #ca5252;
-    float: right;
-    position: relative;
-    top: -25px;
+.basket-item-quantity {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 10px;
+    width: 40px;
+    text-align: center;
+}
+
+.basket-item-quantity-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+}
+
+.delete-unit-button {
+    background-color: #0055FF;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: color, transform 500ms ease;
+    transition: background-color 0.3s ease;
+    margin: 0 5px;
+    width: 40px;
+    text-align: center;
 }
 
-.basket-delete-icon:hover {
-    color: #d83030;
-    transform: scale(1.5);
+.delete-unit-button:hover {
+    background-color: #066AFF;
+    transform: scale(1.05);
 }
+
 
 .basket-item-summa {
-    float: left;
-    width: 100%;
-    font-weight: 600;
-    font: 20px Roboto;
-    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+    text-align: right;
+}
+
+.empty-basket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* Цвет фона */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.no-product {
+    width: 120px; /* Установите нужный размер изображения */
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 15px; /* Отступ снизу для изображения */
+}
+
+.no-product-text {
+    font-size: 18px; /* Размер шрифта текста */
+    font-weight: 500;
+    color: #666; /* Цвет текста */
+    text-align: center;
 }

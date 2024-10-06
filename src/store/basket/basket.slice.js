@@ -1,6 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = []
+// Загружаем состояние из localStorage
+const loadStateFromLocalStorage = () => {
+    try {
+        const serializedState = localStorage.getItem("basket");
+        return serializedState ? JSON.parse(serializedState) : [];
+    } catch (error) {
+        console.error("Ошибка при загрузке состояния из localStorage:", error);
+        return [];
+    }
+};
+
+const initialState = loadStateFromLocalStorage();
 
 export const basketSlice = createSlice({
     name: "basket",
@@ -16,30 +27,32 @@ export const basketSlice = createSlice({
                 // Если товара нет, добавляем его с количеством 1
                 state.push({ ...item, quantity: 1 });
             }
+            // Сохраняем текущее состояние в localStorage
+            localStorage.setItem("basket", JSON.stringify(state));
         },
-        // Уменьшаем количество или удаляем товар
+
         removeFromBasket: (state, { payload: itemId }) => {
-            const existingItem = state.find((item) => item.id === itemId);
-            if (existingItem) {
+            const existingItemIndex = state.findIndex((item) => item.id === itemId);
+            if (existingItemIndex !== -1) {
+                const existingItem = state[existingItemIndex];
                 if (existingItem.quantity > 1) {
                     // Если количество больше 1, уменьшаем его
                     existingItem.quantity -= 1;
                 } else {
                     // Если количество 1, удаляем товар
-                    return state.filter((item) => item.id !== itemId);
+                    state.splice(existingItemIndex, 1);
                 }
+                // Сохраняем текущее состояние в localStorage
+                localStorage.setItem("basket", JSON.stringify(state));
             }
         },
-        // Полностью удаляем товар из корзины
-        deleteItem: (state, { payload: itemId }) => {
-            return state.filter((item) => item.id !== itemId);
-        },
-        // Очищаем всю корзину
+
         clearBasket: () => {
+            localStorage.removeItem("basket"); // Очищаем localStorage
             return [];
         }
     }
-})
+});
 
 export const { actions, reducer } = basketSlice;
-export const { addToBasket, removeFromBasket, deleteItem, clearBasket } = actions;
+export const { addToBasket, removeFromBasket, clearBasket } = actions;
