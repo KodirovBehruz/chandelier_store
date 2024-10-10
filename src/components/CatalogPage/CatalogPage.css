@@ -1,13 +1,13 @@
 .catalog-page {
     margin-top: 100px;
     margin-bottom: 100px;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .catalog-items {
     display: grid;
     grid-template-columns: repeat(3, 384px);
-    gap: 90px 24px;
+    gap: 70px 20px;
     position: relative;
     justify-content: center;
 }
@@ -34,7 +34,7 @@
 }
 
 .catalog-item-image img {
-    width: 70%;
+    width: 60%;
     transition: transform 0.3s ease;
 }
 
@@ -44,7 +44,7 @@
 
 .catalog-item-details {
     margin-top: 100px;
-    padding: 24px;
+    padding: 20px;
 }
 
 .catalog-item-text {
@@ -148,3 +148,22 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* Для экрана шириной от 1200px */
+@media (max-width: 1200px) {
+    .catalog-page {
+        width: 1000px;
+        justify-content: center;
+        margin: 100px auto;
+    }
+
+    .catalog-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 80px 50px;
+        justify-content: center;
+    }
+
+    .catalog-item-image {
+        height: 202px;
+    }
+
+}

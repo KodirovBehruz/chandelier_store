@@ -1,12 +1,27 @@
 .discount-section {
     margin-top: 100px;
-    padding: 20px 0;
+    margin-bottom: 100px;
+    padding: 10px 0;
 }
 
 .discount-items {
     display: grid;
     grid-template-columns: repeat(3, 384px);
-    gap: 90px 24px;
+    gap: 70px 20px;
     position: relative;
     justify-content: center;
+}
+
+@media (max-width: 1200px) {
+    .discount-section {
+        width: 1000px;
+        justify-content: center;
+        margin: 100px auto;
+    }
+
+    .discount-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 80px 50px;
+        justify-content: center;
+    }
 }

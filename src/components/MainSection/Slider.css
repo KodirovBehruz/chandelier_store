@@ -4,6 +4,22 @@
 
 .swiper-button-prev, .swiper-button-next {
     color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+    font-size: 20px;
 }
 
 .swiper-slide img {
@@ -26,4 +42,19 @@
 
 .swiper-slide-active img {
     opacity: 1; /* Полностью видимое активное изображение */
+}
+
+@media (max-width: 1024px) {
+    .swiper-button-prev, .swiper-button-next {
+        width: 40px;
+        height: 40px;
+    }
+
+    .swiper-button-prev::after, .swiper-button-next::after {
+        font-size: 16px;
+    }
+
+    .swiper-slide img {
+        width: 85%;
+    }
 }
